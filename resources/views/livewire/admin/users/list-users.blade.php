@@ -60,7 +60,7 @@
                                             <a href="#" wire:click.prevent="startConversation({{ $user->id }})" class="text-secondary"><i class="fa fa-comments"></i></a>
                                         </td>
                                         <td>{{ $user->email }}</td>
-                                        <td>{{ $user->created_at?->toFormattedDate() ?? 'N/A' }}</td>
+                                        {{-- <td>{{ $user->created_at?->toFormattedDate() ?? 'N/A' }}</td> --}}
                                         <td>
                                             <select class="form-control" wire:change="changeRole({{ $user }}, $event.target.value)">
                                                 <option value="admin" {{ ($user->role === 'admin') ? 'selected' : '' }}>ADMIN</option>
